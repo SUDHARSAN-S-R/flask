@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+    <h1>Hello, World!</h1>
+    <p>{{ value }}</p>
+    <p>The square of 5 is: {{ result }}</p>
+
+
+    <a href="{{ url_for('other') }}">Go to Other Page</a>
+{% endblock %}
