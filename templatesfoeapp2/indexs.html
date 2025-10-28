@@ -1,0 +1,24 @@
+{% extends "bases.html" %}
+{% block title %}Home1 Page{% endblock %}
+
+{% block content %}
+    <h1>Hello, World!</h1>
+    <p>{{ value }}</p>
+
+    <form method="post" action="{{ url_for('home') }}">
+        <input type="text" name="username" placeholder="UserName">
+        <input type="password" name="password" placeholder="Password">
+
+</br>
+        <button type="submit">Login</button>
+    </form>
+
+
+<form method="POST" action="{{url_for('file_upload')}}" enctype="multipart/form-data">
+    <input type="file" name="file" accept="text/plain">    
+<input type="submit" value="upload_file">
+
+</form>
+
+
+{% endblock %}
